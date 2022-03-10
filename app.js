@@ -3,6 +3,7 @@ const validateEmail = () => {
     const emailText = email.value;
     const regEx = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
     const isValid = regEx.test(emailText);
+    email.value = '';
     if (isValid) {
         document.getElementById('success').style.display = 'block';
         document.getElementById('error').style.display = 'none';
